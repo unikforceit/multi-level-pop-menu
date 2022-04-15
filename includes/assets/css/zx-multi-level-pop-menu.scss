@@ -1,0 +1,16 @@
+[data-background] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.multi-level-pop-menu-addons {
+  ul{
+    margin: 0;
+  }
+  .zeynep .submenu {
+    ~ ul {
+      display: none;
+    }
+  }
+}

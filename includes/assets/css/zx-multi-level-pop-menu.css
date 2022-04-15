@@ -1,0 +1,14 @@
+[data-background] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.multi-level-pop-menu-addons ul {
+  margin: 0;
+}
+.multi-level-pop-menu-addons .zeynep .submenu ~ ul {
+  display: none;
+}
+
+/*# sourceMappingURL=zx-multi-level-pop-menu.css.map */
