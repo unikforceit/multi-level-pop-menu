@@ -107,6 +107,14 @@ class multi_level_pop_menu_addons extends Widget_Base
                 ],
             ]
         );
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'nav_fontsaaa',
+                'label' => __('Button Typography', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} button.btn-open.first',
+            ]
+        );
         $this->add_control(
             'btn_color',
             [
@@ -116,6 +124,25 @@ class multi_level_pop_menu_addons extends Widget_Base
                     '{{WRAPPER}} button.btn-open.first' => 'color: {{VALUE}}',
                     '{{WRAPPER}} button.btn-open.first svg' => 'fill: {{VALUE}}',
                 ],
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'nav_fontsaaaas',
+                'label' => __('Button Border', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} button.btn-open.first',
+            ]
+        );
+        $this->add_responsive_control(
+            'sdpdaaaabb',
+            [
+                'label' => esc_html__('Button Border', 'thepack'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} button.btn-open.first' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ]
             ]
         );
         $this->add_responsive_control(
