@@ -17,27 +17,28 @@
             $('.zeynep ul > li.has-submenu > a').each( function (){
                 var text = $(this).text();
                 var text_id = text.toLowerCase();
-                var sub_menu = $(this).closest('ul').html();
-                text_id = $.trim(text_id);
+                var sub_menu = $(this).next('ul.sub-menu').html();
+                text_id = text_id.replace(" ", "");
                 $(this).attr('href', '#');
                 $(this).attr('data-submenu', text_id);
-                $(this).after('<div id="'+text_id+'" class="submenu">\n' +
-                    '                    <div class="submenu-header">\n' +
-                    '                        <a href="#" data-submenu-close="'+text_id+'">'+text+'</a>\n' +
-                    '                    </div>\n' +
+                $(this).after('<div id="'+text_id+'" class="submenu">' +
+                    '                    <div class="submenu-header">' +
+                    '                        <a href="#" data-submenu-close="'+text_id+'">'+text+'</a>' +
+                    '                    </div>' +
                     '                    <label>'+text+'</label>'+
-                    '<ul>'+ sub_menu + '</ul></div>');
+                    '<ul>'+ sub_menu + '</ul>' +
+                    '</div>');
             });
 
             var zeynep = $('.zeynep').zeynep({
                 opened: function () {
-                    console.log('the side menu is opened')
+                    //console.log('the side menu is opened')
                 }
             });
 
             // dynamically bind 'closing' event
             zeynep.on('closing', function () {
-                console.log('this event is dynamically binded')
+                //console.log('this event is dynamically binded')
             });
 
             // handle zeynepjs overlay click

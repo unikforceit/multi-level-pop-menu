@@ -184,7 +184,7 @@ class multi_level_pop_menu_addons extends Widget_Base
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'dropbgaa',
+                'name' => 'dropbgaakk',
                 'label' => __('Main BG', 'multi-level-pop-menu'),
                 'types' => ['classic', 'gradient'],
                 'show_label' => true,
