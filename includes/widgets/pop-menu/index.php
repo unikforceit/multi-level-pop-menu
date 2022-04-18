@@ -84,6 +84,14 @@ class multi_level_pop_menu_addons extends Widget_Base
                 ],
             ]
         );
+        $this->end_controls_section();
+        $this->start_controls_section(
+            'menu_style',
+            [
+                'label' => __('Main Menu', 'multi-level-pop-menu'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
         $this->add_responsive_control(
             'btntxt',
             [
@@ -188,14 +196,6 @@ class multi_level_pop_menu_addons extends Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} .multi-level-pop-menu-addons main' => 'text-align: {{VALUE}};',
                 ],
-            ]
-        );
-        $this->end_controls_section();
-        $this->start_controls_section(
-            'menu_style',
-            [
-                'label' => __('Main Menu', 'multi-level-pop-menu'),
-                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
         $this->add_control(
@@ -307,7 +307,86 @@ class multi_level_pop_menu_addons extends Widget_Base
             ]
         );
         $this->end_controls_section();
-
+        $this->start_controls_section(
+            'sub_menu_style',
+            [
+                'label' => __('Sub Main Menu', 'multi-level-pop-menu'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'nsav_fontsaaa',
+                'label' => __('Active Typography', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} .zeynep .submenu-header > a',
+            ]
+        );
+        $this->add_control(
+            'sbtn_color',
+            [
+                'label' => __('Active Color', 'multi-level-pop-menu'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .zeynep .submenu-header > a' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'dropbaaag',
+                'label' => __('Main BG', 'multi-level-pop-menu'),
+                'types' => ['classic', 'gradient'],
+                'show_label' => true,
+                'selector' => '{{WRAPPER}} .zeynep .submenu-header > a',
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'droborderaaa',
+                'label' => __('Active Border', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} .zeynep .submenu-header > a',
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'nsaav_fontsaaaa',
+                'label' => __('Typography', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} .zeynep .submenu.opened ul > li > a',
+            ]
+        );
+        $this->add_control(
+            'sabtn_colora',
+            [
+                'label' => __('Color', 'multi-level-pop-menu'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .zeynep .submenu.opened ul > li > a' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'dropbaaaga',
+                'label' => __('Main BG', 'multi-level-pop-menu'),
+                'types' => ['classic', 'gradient'],
+                'show_label' => true,
+                'selector' => '{{WRAPPER}} .zeynep .submenu.opened ul > li > a',
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'droborderaasa',
+                'label' => __('Active Border', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} .zeynep .submenu.opened ul > li > a',
+            ]
+        );
+        $this->end_controls_section();
     }
 
     protected function render()
