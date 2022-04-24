@@ -317,6 +317,44 @@ class multi_level_pop_menu_addons extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
+                'name' => 'nav_fontaasaaa',
+                'label' => __('Label Typography', 'multi-level-pop-menu'),
+                'selector' => '{{WRAPPER}} .zeynep .submenu > label',
+            ]
+        );
+        $this->add_control(
+            'btn_coloraaa',
+            [
+                'label' => __('Label Color', 'multi-level-pop-menu'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .zeynep .submenu > label' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'dropbaaagaaaa',
+                'label' => __('Main BG', 'multi-level-pop-menu'),
+                'types' => ['classic', 'gradient'],
+                'show_label' => true,
+                'selector' => '{{WRAPPER}} .zeynep ul > li.has-submenu > a',
+            ]
+        );
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'dropbaaagaaaaas',
+                'label' => __('Main BG', 'multi-level-pop-menu'),
+                'types' => ['classic', 'gradient'],
+                'show_label' => true,
+                'selector' => '{{WRAPPER}} .zeynep .submenu-header > a:before',
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
                 'name' => 'nsav_fontsaaa',
                 'label' => __('Active Typography', 'multi-level-pop-menu'),
                 'selector' => '{{WRAPPER}} .zeynep .submenu-header > a',

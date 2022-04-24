@@ -23,7 +23,7 @@
                 $(this).attr('data-submenu', text_id);
                 $(this).after('<div id="'+text_id+'" class="submenu">' +
                     '                    <div class="submenu-header">' +
-                    '                        <a href="#" data-submenu-close="'+text_id+'">'+text+'</a>' +
+                    '                        <a href="#" data-submenu-close="'+text_id+'">Main Menu</a>' +
                     '                    </div>' +
                     '                    <label>'+text+'</label>'+
                     '<ul>'+ sub_menu + '</ul>' +
